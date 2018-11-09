@@ -15,3 +15,6 @@ def set_age(self, age):
 
 from types import MethodType
 s.set_age = MethodType(set_age, s)
+
+s2 = Student()
+s2.set_age(25)
