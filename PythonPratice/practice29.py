@@ -16,7 +16,7 @@ sql = "INSERT INTO IHEPC (`date`, `time`, " \
       "`global_active_power`, `global_reactive_power`, `voltage`, `global_intensity`, `sub_metering_1`, `sub_metering_2`, `sub_metering_3`) " \
       "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
-
+# todo
 # 建表依然存在问题，但直接放到 MySQL 语句中却能够执行，后面有时间来处理这个问题
 create_sql = """
 DROP TABLE IF EXISTS `IHEPC`;
