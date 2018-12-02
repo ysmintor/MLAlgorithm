@@ -9,7 +9,7 @@ LEARNING_RATE_DECAY = 0.99
 REGULARIZATION_RATE = 0.0001
 TRAINING_STEPS = 30000
 MOVING_AVERAGE_DECAY = 0.99
-MODEL_SAVE_PATH = "MNIST_model/"
+MODEL_SAVE_PATH = "/Users/york/MasterCourse/数据分析工具实践/Lectures/第10次课/Tensorflow-Chapter05/MNIST_model/"
 MODEL_NAME = "mnist_model"
 
 
@@ -42,16 +42,16 @@ def train(mnist):
     with tf.Session() as sess:
         tf.global_variables_initializer().run()
 
-        for i in range(TRAINING_STEPS):ff
+        for i in range(TRAINING_STEPS):
             xs, ys = mnist.train.next_batch(BATCH_SIZE)
             _, loss_value, step = sess.run([train_op, loss, global_step], feed_dict={x: xs, y_: ys})
             if i % 1000 == 0:
                 print("After %d training step(s), loss on training batch is %g." % (step, loss_value))
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
 
-    def main(argv=None):
-        mnist = input_data.read_data_sets("../../../datasets/MNIST_data", one_hot=True)
-        train(mnist)
+def main(argv=None):
+    mnist = input_data.read_data_sets("/Users/york/MasterCourse/数据分析工具实践/Lectures/第10次课/Tensorflow-Chapter05/MNIST_data", one_hot=True)
+    train(mnist)
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
