@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-INPUT_NODE = 784
+INPUT_NODE = 256
 OUTPUT_NODE = 10
 LAYER1_NODE = 500
 
